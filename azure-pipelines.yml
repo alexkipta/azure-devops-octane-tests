@@ -9,6 +9,14 @@ trigger:
 
 pool: Default
 
+parameters:
+  - name: runExtraStep
+    type: boolean
+    default: true
+ 
+  - name: mavenGoals
+    type: string
+    default: 'clean test'
 steps:
 # - task: octane-test-runner-start-task@1
 #   inputs:
