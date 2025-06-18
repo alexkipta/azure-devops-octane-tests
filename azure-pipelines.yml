@@ -18,7 +18,7 @@ steps:
 
 - task: octane-start-task-private@1
   inputs:
-    OctaneServiceConnection: 'Costea connection name'
+    OctaneServiceConnection: 'Costea conection name'
     WorkspaceList: '1002'
     CreatePipelineCheckbox: true
 
@@ -58,5 +58,5 @@ steps:
 
 - task: octane-end-task-private@1
   inputs:
-    OctaneServiceConnection: 'Costea connection name'
+    OctaneServiceConnection: 'Costea conection name'
     WorkspaceList: '1002'
