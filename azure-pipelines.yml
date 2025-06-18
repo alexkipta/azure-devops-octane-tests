@@ -18,15 +18,10 @@ steps:
 
 - task: octane-start-task-private@1
   inputs:
-    OctaneServiceConnection: 'connectionOctane1'
+    OctaneServiceConnection: 'Costea connection name'
     WorkspaceList: '1002'
     CreatePipelineCheckbox: true
 
-- task: octane-start-task@2
-  inputs:
-    OctaneServiceConnection: 'connectionOctane'
-    WorkspaceList: '1002'
-    CreatePipelineCheckbox: true
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
@@ -61,8 +56,7 @@ steps:
 #     artifact: 'bdd2octaneResults'
 #     path: '$(System.DefaultWorkingDirectory)/results'
 
-- task: octane-end-task@2
+- task: octane-end-task-private@1
   inputs:
-    OctaneServiceConnection: 'connectionOctane'
-#    CucumberReportPath: '$(System.DefaultWorkingDirectory)/results'
+    OctaneServiceConnection: 'Costea connection name'
     WorkspaceList: '1002'
