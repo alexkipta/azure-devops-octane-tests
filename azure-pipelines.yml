@@ -17,6 +17,11 @@ parameters:
   - name: mavenGoals
     type: string
     default: 'clean test'
+    
+  - name: tuala
+    type: string
+    default: 'Dan Almasan'
+
 steps:
 # - task: octane-test-runner-start-task@1
 #   inputs:
