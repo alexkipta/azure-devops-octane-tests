@@ -32,9 +32,9 @@ steps:
 #     WorkspaceList: '1002'
 #     Framework: junit
 
-- task: octane-start-task-private@1
+- task: octane-start-task@25
   inputs:
-    OctaneServiceConnection: 'Costea conection name'
+    OctaneServiceConnection: 'Costea connection'
     WorkspaceList: '1002'
     CreatePipelineCheckbox: true
 
@@ -72,7 +72,7 @@ steps:
 #     artifact: 'bdd2octaneResults'
 #     path: '$(System.DefaultWorkingDirectory)/results'
 
-- task: octane-end-task-private@1
+- task: octane-end-task@25
   inputs:
-    OctaneServiceConnection: 'Costea conection name'
+    OctaneServiceConnection: 'Costea connection'
     WorkspaceList: '1002'
