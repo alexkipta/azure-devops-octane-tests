@@ -36,11 +36,13 @@ steps:
     WorkspaceList: '1002'
     CreatePipelineCheckbox: true
 
-- script: |
-    curl -X POST \
-      http://http://sdm-linux-jenkins.otxlab.net:8080/job/octane%20deploy/10/ \
-      --user jenkins-user:11b95382a9fa1bf13195c28a54d519d288
+
+- powershell: |
+    curl -X POST `
+      http://http://sdm-linux-jenkins.otxlab.net:8080/job/octane%20deploy/10 `
+      --user jenkins-user:$(J11b95382a9fa1bf13195c28a54d519d288)
   displayName: "Trigger Jenkins Job"
+
 
 
 - script: |
