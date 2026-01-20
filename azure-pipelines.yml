@@ -9,9 +9,6 @@ trigger:
 
 pool: Default
 
-
-
-
 parameters:
   - name: runExtraStep
     type: boolean
@@ -25,6 +22,7 @@ parameters:
     type: string
     default: 'Dan Almasan'
 
+
 steps:
 # - task: octane-test-runner-start-task@1
 #   inputs:
@@ -37,6 +35,12 @@ steps:
     OctaneServiceConnection: 'Costea connection'
     WorkspaceList: '1002'
     CreatePipelineCheckbox: true
+
+- script: |
+    curl -X POST \
+      http://http://sdm-linux-jenkins.otxlab.net:8080/job/octane%20deploy/10/ \
+      --user jenkins-user:11b95382a9fa1bf13195c28a54d519d288
+  displayName: "Trigger Jenkins Job"
 
 
 - script: |
