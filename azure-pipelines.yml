@@ -40,7 +40,7 @@ steps:
 - powershell: |
     curl -X POST `
       http://http://sdm-linux-jenkins.otxlab.net:8080/job/octane%20deploy/10 `
-      --user jenkins-user:$(J11b95382a9fa1bf13195c28a54d519d288)
+      --user admin:1109d28fda6ee037286bb7c65b516e781b
   displayName: "Trigger Jenkins Job"
 
 
