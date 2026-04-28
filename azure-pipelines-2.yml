@@ -10,6 +10,13 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+
+- task: octane-start-task@25
+  inputs:
+    OctaneServiceConnection: 'Costea connection'
+    WorkspaceList: '2001'
+    CreatePipelineCheckbox: true
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -20,3 +27,8 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+
+- task: octane-end-task@25
+  inputs:
+    OctaneServiceConnection: 'Costea connection'
+    WorkspaceList: '2001'
