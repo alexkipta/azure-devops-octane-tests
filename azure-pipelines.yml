@@ -30,18 +30,11 @@ steps:
 #     WorkspaceList: '1002'
 #     Framework: junit
 
-- task: octane-start-task@25
+- task: octane-start-task@26
   inputs:
     OctaneServiceConnection: 'Costea connection'
-    WorkspaceList: '1002'
+    WorkspaceList: '1003'
     CreatePipelineCheckbox: true
-
-
-- powershell: |
-    curl -X POST `
-      http://http://sdm-linux-jenkins.otxlab.net:8080/job/octane%20deploy/10 `
-      --user admin:1109d28fda6ee037286bb7c65b516e781b
-  displayName: "Trigger Jenkins Job"
 
 
 
@@ -78,7 +71,8 @@ steps:
 #     artifact: 'bdd2octaneResults'
 #     path: '$(System.DefaultWorkingDirectory)/results'
 
-- task: octane-end-task@25
+- task: octane-end-task@26
   inputs:
     OctaneServiceConnection: 'Costea connection'
-    WorkspaceList: '1002'
+    WorkspaceList: '1003'
+    Framework: 'junit'
