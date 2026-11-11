@@ -19,7 +19,7 @@ parameters:
   - name: octane_auto_action_execution_id
     type: string
     displayName: "Octane auto action execution id"
-    default: ''
+    default: 'costelo'
 
 pool: Default
 
