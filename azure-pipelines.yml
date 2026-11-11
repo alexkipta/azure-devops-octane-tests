@@ -1,7 +1,7 @@
 # azure-pipelines.yml
 
 trigger:
-- master
+- none
 
 parameters:
   - name: runExtraStep
@@ -19,7 +19,7 @@ parameters:
   - name: octane_auto_action_execution_id
     type: string
     displayName: "Octane auto action execution id"
-    default: 'costelo'
+    default: 'costeloupdate'
 
 pool: Default
 
