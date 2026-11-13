@@ -12,9 +12,9 @@ parameters:
     type: string
     default: 'clean test'
 
-  - name: costelo
+  - name: piciu
     type: string
-    default: 'barosan'
+    default: 'mareom'
 
   - name: unitTestResultsGlobPattern
     type: string
