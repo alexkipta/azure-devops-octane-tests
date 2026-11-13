@@ -12,6 +12,10 @@ parameters:
     type: string
     default: 'clean test'
 
+  - name: costelo
+    type: string
+    default: 'barosan'
+
   - name: unitTestResultsGlobPattern
     type: string
     default: '**/surefire-reports/TEST-*.xml'
